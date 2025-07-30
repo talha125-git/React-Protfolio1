@@ -74,7 +74,7 @@ const Navbar = () => {
                 </div>
                 <a
                     onClick={handleDownload}
-                    className='text-lg bg-pink-400  cursor-pointer hover:bg-purple-400 text-white py-2 px-4 rounded-full mt-6'
+                    className='text-lg bg-purple-400 cursor-pointer hover:bg-purple-400 text-white py-2 px-4 rounded-full mt-6'
                 >
                     Download CV
                 </a>

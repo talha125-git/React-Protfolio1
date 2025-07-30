@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaCode, FaLaptopCode, FaPalette, FaCogs, FaPython, FaBug } from "react-icons/fa";
+import { FaCode, FaLaptopCode, FaPalette, FaCogs, FaPython, FaBug, FaDatabase } from "react-icons/fa";
+
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer"; //for scroll animation
 
@@ -7,9 +8,25 @@ const Services = () => {
     const servicesData = [
         {
             title: "App Design",
-            description: "Creating visually appealing and user-friendly mobile applications with modern design principles.",
+            description: (
+                <>
+                    <p>
+                        Practicing mobile app development using Dart and Flutter by building functional apps like a Unit Converter.
+                    </p>
+                    <a
+                        href="https://talha125-git.github.io/Unit_Converter-App/ "
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block mt-2 px-4 py-1 bg-transparent border-2 border-purple-600 text-purple-500 hover:text-white rounded-lg hover:bg-purple-600 transition"
+                    >
+                        Visit
+                    </a>
+                </>
+            ),
             icon: <FaPalette className='text-purple-500 text-4xl sm:text-5xl lg:text-6xl mb-4 mx-auto' />
-        },
+        }
+
+        ,
         {
             title: "Web Development",
             description: "Building responsive and scalable websites with cutting-edge technologies and best practices.",
@@ -27,14 +44,16 @@ const Services = () => {
         },
         {
             title: "Python",
-            description: "Writing efficient and scalable code for automation, web development, and data science in Python.",
+            description: "Practicing Python with a focus on AI projects like face recognition, working with algorithms, and building smart applications.",
             icon: <FaPython className='text-purple-500 text-4xl sm:text-5xl lg:text-6xl mb-4 mx-auto' />
-        },
+        }
+        ,
         {
-            title: "SQA",
-            description: "Ensuring software quality through testing, debugging, and implementing best practices in Software Quality Assurance.",
-            icon: <FaBug className='text-purple-500 text-4xl sm:text-5xl lg:text-6xl mb-4 mx-auto' />
+            title: "Database",
+            description: "Studied Advanced Database concepts including PL/SQL programming, joins, and other relational database techniques for efficient data management.",
+            icon: <FaDatabase className='text-purple-500 text-4xl sm:text-5xl lg:text-6xl mb-4 mx-auto' />
         },
+
     ];
 
     const { ref, inView } = useInView({

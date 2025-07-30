@@ -20,7 +20,7 @@ const Experience = () => {
                     transition={{ delay: 0.4, duration: 0.3 }}
                     className='text-center'>
 
-                    <h3 className='text-3xl  md:text-8xl font-bold md:my-4 text-purple-500'>2+</h3>
+                    <h3 className='text-3xl  md:text-8xl font-bold md:my-4 text-purple-500'>1+</h3>
 
                     <motion.p
                         ref={ref}
