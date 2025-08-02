@@ -1,0 +1,19 @@
+✅ Steps to Update & Deploy Portfolio
+
+🔹 1. Make your changes in code
+		(Edit your files in VS Code)
+
+🔹 2. Run the following commands in terminal:
+		git add .
+		git commit -m "your commit message"
+		git push origin main
+
+🔹 3. Build the updated project
+		npm run build
+
+🔹 4. Deploy to GitHub Pages (using gh branch)
+		npm run deploy
+
+
+After that, wait a few seconds and visit your site:
+👉 https://talha125-git.github.io/React-Protfolio1/
