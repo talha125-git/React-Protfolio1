@@ -3,11 +3,14 @@ import React, { useState } from 'react';
 import { MdOutlineMenu } from "react-icons/md";
 import { MdClose } from "react-icons/md";
 
+import useScrollReading from './useScrollReading';
+
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";  //use for scorling when click on item in navbar
 import cv from '../assets/talha_cv.pdf';
 
 const Navbar = () => {
+    const calculatedHeight = useScrollReading();   // for scroling animation
 
     //js to download cv pdf
     const handleDownload = () => {
@@ -44,7 +47,17 @@ const Navbar = () => {
 
     return (
         // desktop section
+
+
         <div>
+            {/* css for scoll animation  */}
+            <span
+                style={{ width: `${calculatedHeight}%` }}
+                className='fixed top-[1px] left-0 bg-purple-400 h-1 z-[9999] transition-all duration-150'
+            ></span>
+
+            {/* css for scoll animation  */}
+
             <motion.div
                 initial={{ opacity: 0, y: -100 }}
                 animate={{ opacity: 1, y: 0 }}

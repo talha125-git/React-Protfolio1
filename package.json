@@ -9,7 +9,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -b gh -r https://github.com/talha125-git/React-Protfolio1.git --git git"
+    "deploy": "gh-pages -d dist -b gh -r git@github.com:talha125-git/React-Protfolio1.git"
+
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
