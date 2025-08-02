@@ -3,7 +3,20 @@ import talha1 from '../assets/talha1.png'
 import { motion } from "framer-motion"
 import { Link } from 'react-scroll'
 
+import { gsap } from "gsap";
+
+
 const Hero = () => {
+
+    const handleCursorEnter = () => {
+        window.dispatchEvent(new CustomEvent("cursor-hover", { detail: true }));
+    };
+
+    const handleCursorLeave = () => {
+        window.dispatchEvent(new CustomEvent("cursor-hover", { detail: false }));
+    };
+
+
     return (
         <div className='text-white lg:py-5 py-10 lg:mr-16 mr-0'>
             <motion.img
@@ -24,7 +37,10 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1 }}
-                    className='text-2xl md:text-5xl flex flex-col gap-4 font-bold mb-4'>
+                    className="text-2xl md:text-5xl flex flex-col gap-4 font-bold mb-4 relative z-0"
+                    onMouseEnter={handleCursorEnter}
+                    onMouseLeave={handleCursorLeave}
+                >
                     Malik AbuTalha Raheem
                 </motion.h1>
 

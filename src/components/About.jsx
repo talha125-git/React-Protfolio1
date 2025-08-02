@@ -5,6 +5,14 @@ import { useInView } from "react-intersection-observer"; //for scroll animation
 
 const About = () => {
 
+     const handleCursorEnter = () => {
+        window.dispatchEvent(new CustomEvent("cursor-hover", { detail: true }));
+    };
+
+    const handleCursorLeave = () => {
+        window.dispatchEvent(new CustomEvent("cursor-hover", { detail: false }));
+    };
+    
     const { ref, inView } = useInView({
         triggerOnce: true,
         threshold: 0.2,
@@ -20,6 +28,8 @@ const About = () => {
                         delay: 0.3,
                         duration: 0.5
                     }}
+                    onMouseEnter={handleCursorEnter}
+                    onMouseLeave={handleCursorLeave}
                     className='text-3xl md:text-4xl font-bold mb-8 underline'>About me
                 </motion.h2>
 

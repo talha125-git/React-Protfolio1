@@ -60,7 +60,14 @@ const Services = () => {
         triggerOnce: true,
         threshold: 0.2,
     });
+    // js for cusor hover on Services heading
+    const handleCursorEnter = () => {
+        window.dispatchEvent(new CustomEvent("cursor-hover", { detail: true }));
+    };
 
+    const handleCursorLeave = () => {
+        window.dispatchEvent(new CustomEvent("cursor-hover", { detail: false }));
+    };
     return (
         <div id='services' className='text-white py-8'>
             <motion.div
@@ -69,7 +76,12 @@ const Services = () => {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5 }}
                 className='mx-auto px-4 text-center'>
-                <h2 className='text-3xl md:text-4xl font-bold underline mb-6'>Services</h2>
+                <h2
+                    onMouseEnter={handleCursorEnter}
+                    onMouseLeave={handleCursorLeave}
+                    className='text-3xl md:text-4xl font-bold underline mb-6'>
+                    Services
+                </h2>
                 <p className='mb-10 text-gray-400'>Providing innovative solutions, from web development to UI/UX design, tailored to your needs.</p>
 
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -82,7 +94,10 @@ const Services = () => {
                             className='bg-[#1c1a2b] rounded-lg p-6 text-center hover:shadow-lg hover:shadow-purple-500 transition-shadow duration-300'
                             key={index}>
                             {service.icon}
-                            <h3 className='sm:text-xl lg:text-2xl text-center font-semibold mb-2'>{service.title}</h3>
+                            <h3
+                                onMouseEnter={handleCursorEnter}
+                                onMouseLeave={handleCursorLeave}
+                                className='sm:text-xl lg:text-2xl text-center font-semibold mb-2'>{service.title}</h3>
                             <p className='text-sm sm:text-base lg:text-lg text-gray-400'>{service.description}</p>
                         </motion.div>
                     ))}

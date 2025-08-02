@@ -38,6 +38,13 @@ const Work = () => {
         threshold: 0.2,
     });
 
+    const handleCursorEnter = () => {
+        window.dispatchEvent(new CustomEvent("cursor-hover", { detail: true }));
+    };
+
+    const handleCursorLeave = () => {
+        window.dispatchEvent(new CustomEvent("cursor-hover", { detail: false }));
+    };
     return (
         <div id='work' className='py-6'>
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -46,6 +53,8 @@ const Work = () => {
                     initial={{ opacity: 0, y: 100 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ delay: 0.3, duration: 0.5 }}
+                    onMouseEnter={handleCursorEnter}
+                    onMouseLeave={handleCursorLeave}
                     className='text-4xl text-white underline font-bold mb-12 text-center'>
                     My Work
                 </motion.h2>
@@ -76,7 +85,10 @@ const Work = () => {
                                     alt={project.tile}
                                 />
                                 <div className='p-6'>
-                                    <h3 className='text-xl text-white font-semibold mb-2'>{project.tile}</h3>
+                                    <h3
+                                        onMouseEnter={handleCursorEnter}
+                                        onMouseLeave={handleCursorLeave}
+                                        className='text-xl text-white font-semibold mb-2'>{project.tile}</h3>
                                     <p className='text-slate-400 mb-4'>{project.description}</p>
                                     <button className='border-2 border-purple-500 text-purple-500 px-4 py-2 rounded-full hover:bg-purple-500 hover:text-white transition'>
                                         <a href={project.link} target="_blank" rel="noopener noreferrer">

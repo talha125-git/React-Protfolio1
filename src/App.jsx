@@ -8,11 +8,13 @@ import Companies from './components/companies';
 import Contact from './components/Contact';
 import Experience from './components/Experience';
 import Footer from './components/Footer';
+import Cursor from './components/Cursor';
 
 
 const App = () => {
   return (
     <div className='bg-[#0e0c1e]'>
+      <Cursor />
       <Navbar />
       <Hero />
       <About />

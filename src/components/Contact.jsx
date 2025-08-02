@@ -10,6 +10,16 @@ import {
 } from "react-icons/fa";
 
 const Contact = () => {
+
+    // js for cursor hover on "let discus ypur project"
+    const handleCursorEnter = () => {
+        window.dispatchEvent(new CustomEvent("cursor-hover", { detail: true }));
+    };
+
+    const handleCursorLeave = () => {
+        window.dispatchEvent(new CustomEvent("cursor-hover", { detail: false }));
+    };
+
     const form = useRef(); // ✅ Correctly using useRef()
 
     const sendEmail = (e) => {
@@ -46,9 +56,12 @@ const Contact = () => {
                     initial={{ opacity: 0, y: -100 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ delay: 0.3, duration: 0.5 }}
+                    onMouseEnter={handleCursorEnter}
+                    onMouseLeave={handleCursorLeave}
                     className='text-4xl text-white font-bold'
                 >
-                    Let's Discuss Your <span className='text-purple-500'>Project</span>
+                    Let's Discuss Your 
+                    <span className='text-purple-500 hover:text-white'> Project</span>
                 </motion.h2>
                 <motion.p
                     ref={ref}
