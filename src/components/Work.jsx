@@ -47,7 +47,12 @@ const Work = () => {
     };
     return (
         <div id='work' className='py-6'>
-            <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <motion.div
+                ref={ref}
+                initial={{ opacity: 0, y: 50 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5 }}
+                className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
                 <motion.h2
                     ref={ref}
                     initial={{ opacity: 0, y: 100 }}
@@ -100,7 +105,7 @@ const Work = () => {
                         ))
                     }
                 </div>
-            </div>
+            </motion.div>
             {/* <motion.div
             ref={ref}
             initial={{ opacity: 0, y: 100 }}
