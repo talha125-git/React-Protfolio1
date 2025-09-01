@@ -37,7 +37,7 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1 }}
-                    className="text-2xl md:text-5xl flex flex-col gap-4 font-bold mb-4 relative z-0"
+                    className="text-2xl md:text-5xl flex flex-col gap-4 font-bold mb-4 mt-5 relative z-0"
                     onMouseEnter={handleCursorEnter}
                     onMouseLeave={handleCursorLeave}
                 >

@@ -37,7 +37,7 @@ const Cursor = () => {
   return (
     <div
       id="cursor"
-      className={`fixed top-0 left-0 h-[20px] w-[20px]  bg-white  rounded-full z-50 pointer-events-none  ${
+      className={` hidden lg:block fixed top-0 left-0 h-[20px] w-[20px]  bg-white  rounded-full z-50 pointer-events-none  ${
         isHoveringH1 ? "mix-blend-difference" : ""
       }`}
     />
