@@ -52,7 +52,7 @@ const About = () => {
 
                         className='mb-8 md:mb-0 md:mr-8 flex justify-center'>
                         <img
-                            className='w-[45%] sm:[40%] md:w-[45%] rounded-full'
+                            className='w-[45%] sm:[40%] md:w-[40%] rounded-[20px]'
                             src={talha2}
                         />
                     </motion.div>
@@ -70,61 +70,7 @@ const About = () => {
                     </motion.p>
                 </div>
 
-                {/* <div className='flex flex-col sm:flex-row justify-around text-center mt-2 space-y-6 sm:space-y-0'>
-                        <motion.div
-                        ref={ref}
-                        initial={{opacity:0}}
-                        animate={inView ? {opacity:1} : {}}
-                        transition={{ delay:1.2, duration:0.3 }}
-                        className='text-center'>
-
-                            <h3 className='text-3xl  md:text-8xl font-bold md:my-4 text-purple-500'>2+</h3>
-
-                            <motion.p 
-                            ref={ref}
-                            initial={{opacity:0, y:100}}
-                            animate={inView ? {opacity:1, y:0} : {}}
-                            transition={{ delay:1.7, duration:0.5 }}
-                            className='text-sm sm:text-base text-gray-300'>years of experience
-                            </motion.p>
-                        </motion.div>
-                    
-                        <motion.div
-                            ref={ref}
-                            initial={{opacity:0}}
-                            animate={inView ? {opacity:1} : {}}
-                            transition={{ delay:1.4, duration:0.3 }}
-                            >
-
-                            <h3 className='text-3xl  md:text-8xl font-bold md:my-4 text-purple-500'>5+</h3>
-                            <motion.p 
-                            ref={ref}
-                            initial={{opacity:0, y:100}}
-                            animate={inView ? {opacity:1, y:0} : {}}
-                            transition={{ delay:1.8, duration:0.5 }}
-
-                            className='text-sm sm:text-base text-gray-300'>Clients
-                            </motion.p>
-                        </motion.div>
-                    
-                        <motion.div
-                            ref={ref}
-                            initial={{opacity:0}}
-                            animate={inView ? {opacity:1} : {}}
-                            transition={{ delay:1.6, duration:0.3 }}
-                            >
-
-                            <h3 className='text-3xl  md:text-8xl font-bold md:my-4 text-purple-500'>20+</h3>
-                            <motion.p 
-                            ref={ref}
-                            initial={{opacity:0, y:100}}
-                            animate={inView ? {opacity:1, y:0} : {}}
-                            transition={{ delay:1.9, duration:0.5 }}
-
-                            className='text-sm sm:text-base text-gray-300'>Projcts I have made
-                            </motion.p>
-                        </motion.div>
-                    </div> */}
+                
 
             </div>
 
