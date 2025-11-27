@@ -7,7 +7,7 @@ import useScrollReading from './useScrollReading';
 
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";  //use for scorling when click on item in navbar
-import cv from '../assets/talha_cv.pdf';
+import cv from '../assets/Talha_Resume.pdf';
 
 const Navbar = () => {
     const calculatedHeight = useScrollReading();   // for scroling animation
@@ -16,7 +16,7 @@ const Navbar = () => {
     const handleDownload = () => {
         const link = document.createElement('a');
         link.href = cv;
-        link.download = 'talha_cv.pdf';
+        link.download = 'Talha_Resume.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
