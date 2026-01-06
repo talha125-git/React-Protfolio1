@@ -2,6 +2,8 @@ import React from 'react';
 import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.png";
 import project3 from "../assets/project3.png";
+import project4 from "../assets/tax_img.png"
+import project5 from "../assets/couple_img.png"
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer"; //for scroll animation
@@ -30,6 +32,20 @@ const Work = () => {
             description: "A platform aimed at fostering innovation and entrepreneurship in Pakistan by connecting startups with investors and resources.",
             Image: project3,
             link: "https://talha125-git.github.io/Ignite-pakistan1/index%20.html# "
+        },
+        {
+            id: 4,
+            tile: "Internship Project 1",
+            description: "A UK accountancy firm providing tax and accounting services for individuals and businesses.",
+            Image: project4,
+            link: "https://talha125-git.github.io/intern_p1/"
+        },
+        {
+            id: 5,
+            tile: "Internship Project 2",
+            description: "A Swiss platform connecting businesses with flexible, temporary workers.",
+            Image: project5,
+            link: "https://talha125-git.github.io/intern_p2/ "
         },
     ];
 
