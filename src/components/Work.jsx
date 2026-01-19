@@ -45,7 +45,7 @@ const Work = () => {
             tile: "Internship Project 2",
             description: "A Swiss platform connecting businesses with flexible, temporary workers.",
             Image: project5,
-            link: "https://talha125-git.github.io/intern_p2/ "
+            link: "https://intern-p2.vercel.app/"
         },
     ];
 

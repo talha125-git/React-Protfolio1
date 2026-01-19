@@ -5,7 +5,7 @@
 
 🔹 2. Run the following commands in terminal:
 		git add .
-		git commit -m "your commit message"
+		git commit -m "Add link to project 2"
 		git push origin main
 
 🔹 3. Build the updated project
