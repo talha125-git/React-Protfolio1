@@ -5,9 +5,11 @@
 
 🔹 2. Run the following commands in terminal:
 		git add .
-		git commit -m "Add link to project 2"
+		git commit -m "Add Favicon"
 		git push origin main
 
+		npm run build
+		npm run deploy
 🔹 3. Build the updated project
 		npm run build
 
