@@ -12,7 +12,7 @@ const PythonProjects = () => {
         {
             title: "Emotion Detection from Text",
             description: "Analyzes textual input to detect emotions using NLP and Python AI libraries.",
-            link: "https://kc9qnupimvmslu3ukrnokw.streamlit.app/",
+            link: "https://emotion-detection-2a.vercel.app/",
             icon: <FaBrain className="text-purple-500 text-4xl mb-2 mx-auto" />
         },
         {

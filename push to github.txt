@@ -5,7 +5,7 @@
 
 🔹 2. Run the following commands in terminal:
 		git add .
-		git commit -m "Add Python_Projects in Services"
+		git commit -m "Add Link to emotion_detection"
 		git push origin main
 
 		npm run build
